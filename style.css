@@ -2,9 +2,13 @@
 h1 {
     color: black;
     text-align: left;
-    font-family: Georgia, serif
+    font-family: New Century Schoolbook, TeX Gyre Schola, serif
 }
 
 html {
 	background: whitesmoke
+}
+
+img {
+	float: right
 }
