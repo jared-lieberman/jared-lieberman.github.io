@@ -3,7 +3,8 @@ h1 {
     color: black;
     text-align: left;
     font-family: Gill Sans, sans-serif;
-    font-weight: 300
+    font-weight: 300;
+    padding-left: 10px
 }
 
 html {
@@ -19,6 +20,7 @@ img {
 div {
     width: 300px;
     font-family: Gill Sans, sans-serif
+    padding-left: 10px
 } 
 
 a:link {
