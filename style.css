@@ -11,10 +11,10 @@ html {
 
 img {
 	float: right;
-	height: 30%;
-	width: 30%
+	height: 50%;
+	width: 50%
 }
 
-p {
-	text-align: left
-}
+div {
+    width: 300px
+} 
