@@ -1,0 +1,5 @@
+<span id="a">jared@lieberman</span>:<span id="b">~</span><span id="c">$</span> cat jaredlieberman.txt<br/><br/>
+Welcome! My name is Jared Lieberman.<!-- laglaglaglaglaglaglaglaglaglaglaglag --><p>I'm a Data Scientist working for the Commonwealth of Massachusetts within the Department of Revenue.</p><!-- qowifjqwoeijfoqweijfqweoifjqweofijqweoqwoijefoqwijefoijfqiwoefjj -->
+<p>I previously was a software developer in the political science department at MIT and a data science intern at Harvard's Evidence for Policy Design in Delhi.</p><!- oqwipjefqwioefjwioqfjoiqwjfeioqwjefoi -->
+<p>My interests lie in data-driven policy, machine learning, data quality, and government transparency.</p><!-- owlsqweoifjqwoefijqwoeifjqwoefijwef -->
+Feel free to shoot me an email at <a href="mailto:jliebs20@gmail.com">jliebs20@gmail.com</a> and connect with me on <a href="www.linkedin.com/in/jared-r-lieberman-0901a8133">LinkedIn</a>.
