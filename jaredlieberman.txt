@@ -2,4 +2,5 @@
 Welcome! My name is Jared Lieberman.<!-- laglaglaglaglaglaglaglaglaglaglaglag --><p>I'm a Data Scientist working for the Commonwealth of Massachusetts within the Department of Revenue.</p><!-- qowifjqwoeijfoqweijfqweoifjqweofijqweoqwoijefoqwijefoijfqiwoefjj -->
 <p>I previously was a software developer in the political science department at MIT and a data science intern at Harvard's Evidence for Policy Design in Delhi.</p><!- oqwipjefqwioefjwioqfjoiqwjfeioqwjefoi -->
 <p>My interests lie in data-driven policy, machine learning, data quality, and government transparency.</p><!-- owlsqweoifjqwoefijqwoeifjqwoefijwef -->
-Feel free to shoot me an email at <a href="mailto:jliebs20@gmail.com">jliebs20@gmail.com</a> and connect with me on <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile">LinkedIn</a>.
+I received my bachelor's degree from Tufts University where I studied Computer Science and Political Science.
+<p>Feel free to shoot me an email at <a href="mailto:jliebs20@gmail.com">jliebs20@gmail.com</a> and connect with me on <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile">LinkedIn</a>.<p>
