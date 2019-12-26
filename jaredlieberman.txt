@@ -6,5 +6,5 @@ My interests lie in data-driven policy, machine learning, data quality, and gove
 <p>Feel free to shoot me an email at <a href="mailto:jliebs20@gmail.com">jliebs20@gmail.com</a> and connect with me on <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile">LinkedIn</a>.<p>
 
 <span id="a">jared@lieberman</span>:<span id="b">~</span><span id="c">$</span> ls<br/><br/>
-<p><a href="Portfolio/">Experience and Portfolio</a><p>
+<p><a href="portfolio/">Experience and Portfolio</a><p>
 <p><a href="Jared Lieberman_CV.pdf" target="_blank">Resume<p>
