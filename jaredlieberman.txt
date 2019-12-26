@@ -7,4 +7,4 @@ My interests lie in data-driven policy, machine learning, data quality, and gove
 
 <span id="a">jared@lieberman</span>:<span id="b">~</span><span id="c">$</span> ls<br/><br/>
 <p><a href="Portfolio/">Experience and Portfolio</a><p>
-<p><a href="Resume/">Resume<p>
+<p><a href="Jared Lieberman_CV.pdf" target="_blank">Resume<p>
