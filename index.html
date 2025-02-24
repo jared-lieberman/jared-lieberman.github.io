@@ -1,172 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jared's Portfolio</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #121212; /* Dark theme background */
-            color: #ffffff; /* White text */
-            overflow-x: hidden;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jared R. Lieberman</title>
+  <style>
+    /* Reset some default browser styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        header {
-            background-color: #1f1f1f;
-            padding: 1.5rem;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-        }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0; /* Light gray background */
+      color: #333; /* Dark text color */
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
-            color: #00adb5;
-        }
+    /* ----- Header Bar ----- */
+    header {
+      background-color: #333; /* Dark gray top bar */
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
 
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #1f1f1f;
-            padding: 1rem 0;
-        }
+    header .header-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
 
-        nav a {
-            text-decoration: none;
-            color: #ffffff;
-            margin: 0 1.5rem;
-            padding: 0.5rem 1rem;
-            transition: background-color 0.3s;
-        }
+    /* ----- Navigation Links ----- */
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
 
-        nav a:hover {
-            background-color: #00adb5;
-            border-radius: 5px;
-        }
+    nav a:hover {
+      color: #ccc; /* Lighter gray on hover */
+    }
 
-        section {
-            padding: 4rem 2rem;
-            text-align: center;
-        }
+    /* ----- Section Styling ----- */
+    section {
+      padding: 2rem;
+      display: none; /* Hidden by default; shown via JS */
+    }
 
-        footer {
-            background-color: #1f1f1f;
-            color: #ffffff;
-            text-align: center;
-            padding: 1rem;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
-        }
+    /* Home/Bio Layout */
+    #home {
+      display: flex;             /* Put text on the left, image on the right */
+      justify-content: space-between;
+      align-items: flex-start;
+    }
 
-        footer a {
-            color: #00adb5;
-            text-decoration: none;
-        }
+    .home-text {
+      max-width: 60%;           /* Adjust as desired */
+    }
 
-        .hidden {
-            display: none;
-        }
+    .home-text h2 {
+      margin-bottom: 1rem;
+    }
 
-        .background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: linear-gradient(135deg, #1f1f1f, #0a0a0a);
-            overflow: hidden;
-        }
+    .home-text p {
+      line-height: 1.6;
+    }
 
-        .circle {
-            position: absolute;
-            border-radius: 50%;
-            background: rgba(0, 173, 181, 0.1);
-            animation: float 10s infinite ease-in-out;
-        }
+    .home-image-container {
+      max-width: 200px;
+      max-height: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-left: 2rem;
+    }
 
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-20px);
-            }
-        }
-    </style>
+    .home-image-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Resume & Portfolio sections */
+    #resume, #portfolio {
+      text-align: center;
+    }
+
+    /* ----- Footer ----- */
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: auto; /* Push footer to the bottom */
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+
+    footer a:hover {
+      color: #ccc;
+    }
+  </style>
 </head>
 <body>
 
-<div class="background">
-    <div class="circle" style="width: 150px; height: 150px; top: 20%; left: 10%;"></div>
-    <div class="circle" style="width: 200px; height: 200px; top: 50%; left: 70%;"></div>
-    <div class="circle" style="width: 100px; height: 100px; top: 80%; left: 30%;"></div>
-</div>
+  <header>
+    <div class="header-title">Jared R. Lieberman</div>
+    <nav>
+      <a href="#" onclick="showTab('home')">Home/Bio</a>
+      <a href="#" onclick="showTab('resume')">Resume</a>
+      <a href="#" onclick="showTab('portfolio')">Portfolio</a>
+    </nav>
+  </header>
 
-<header>
-    <h1>Jared's Portfolio</h1>
-</header>
+  <!-- Home/Bio Section -->
+  <section id="home">
+    <div class="home-text">
+      <h2>Welcome!</h2>
+      <p>
+        I am a data scientist and interdisciplinary quantitative researcher. 
+        I am a graduate student in the Statistics MA program at Columbia University. 
+        I also work in quantitative research at 
+        <a href="https://www.eurasiagroup.net/" target="_blank" style="color: #333; text-decoration: underline;">Eurasia Group</a>,
+        a political risk consulting firm, where I contribute methodological expertise 
+        and support data science efforts. Prior to graduate school, I was a Fulbright-Nehru 
+        Research Fellow in India.
+      </p>
+    </div>
+    <div class="home-image-container">
+      <!-- Replace with the correct path or filename for your image -->
+      <img src="IMG_1842.jpeg" alt="Jared R. Lieberman">
+    </div>
+  </section>
 
-<nav>
-    <a href="#" onclick="showTab('home')">Home/Bio</a>
-    <a href="#" onclick="showTab('resume')">Resume</a>
-    <a href="#" onclick="showTab('projects')">Projects</a>
-</nav>
-
-<section id="home">
-    <h2>Welcome!</h2>
-    <p>I am a data scientist and interdisciplinary quantitative researcher. I am a graduate student in the Statistics MA program at Columbia University. I also work in quantitative research at <a href="https://www.eurasiagroup.net/" target="_blank" style="color: #00adb5;">Eurasia Group</a>, a political risk consulting firm, where I contribute methodological expertise and support data science efforts. Prior to graduate school, I was a Fulbright-Nehru Research Fellow in India.</p>
-</section>
-
-<section id="resume" class="hidden">
+  <!-- Resume Section -->
+  <section id="resume">
     <h2>Resume</h2>
     <p>Details about Jared's work experience and education.</p>
-</section>
+  </section>
 
-<section id="projects" class="hidden">
-    <h2>Projects</h2>
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <h2>Portfolio</h2>
     <div>
-        <h3>NYC[x] Innovation Fellowship</h3>
-        <p>Details about the NYC[x] Innovation Fellowship project.</p>
+      <h3>NYC[x] Innovation Fellowship</h3>
+      <p>Details about the NYC[x] Innovation Fellowship project.</p>
     </div>
     <div>
-        <h3>NYC Taxi Random Forest Classifier</h3>
-        <p>Details about the NYC Taxi Random Forest Classifier project.</p>
+      <h3>NYC Taxi Random Forest Classifier</h3>
+      <p>Details about the NYC Taxi Random Forest Classifier project.</p>
     </div>
     <div>
-        <h3>Inferential Analysis for Citi Bike Ride Patterns</h3>
-        <p>Details about the Inferential Analysis for Citi Bike Ride Patterns project.</p>
+      <h3>Inferential Analysis for Citi Bike Ride Patterns</h3>
+      <p>Details about the Inferential Analysis for Citi Bike Ride Patterns project.</p>
     </div>
     <div>
-        <h3>Data Science Institute Scholar</h3>
-        <p>Details about the Data Science Institute Scholar project.</p>
+      <h3>Data Science Institute Scholar</h3>
+      <p>Details about the Data Science Institute Scholar project.</p>
     </div>
     <div>
-        <h3>Multilevel Modeling Investigating Voter Turnout in Indian Elections</h3>
-        <p>Details about the Multilevel Modeling Investigating Voter Turnout in Indian Elections project.</p>
+      <h3>Multilevel Modeling Investigating Voter Turnout in Indian Elections</h3>
+      <p>Details about the Multilevel Modeling Investigating Voter Turnout in Indian Elections project.</p>
     </div>
-</section>
+  </section>
 
-<footer>
-    <p>&copy; 2024 Jared | <a href="https://www.linkedin.com/in/jared-lieberman" target="_blank">LinkedIn</a> | <a href="mailto:jrl2162@columbia.edu">Email</a></p>
-</footer>
+  <footer>
+    <p>
+      &copy; 2024 Jared | 
+      <a href="https://www.linkedin.com/in/jared-lieberman" target="_blank">LinkedIn</a> | 
+      <a href="mailto:jrl2162@columbia.edu">Email</a>
+    </p>
+  </footer>
 
-<script>
+  <script>
+    // Show the Home tab by default on page load
+    document.addEventListener("DOMContentLoaded", function() {
+      showTab('home');
+    });
+
     function showTab(tabId) {
-        const sections = document.querySelectorAll('section');
-        sections.forEach(section => section.classList.add('hidden'));
+      // Hide all sections
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => {
+        section.style.display = 'none';
+      });
 
-        const activeSection = document.getElementById(tabId);
-        if (activeSection) {
-            activeSection.classList.remove('hidden');
+      // Show the requested section
+      const activeSection = document.getElementById(tabId);
+      if (activeSection) {
+        activeSection.style.display = 'flex'; 
+        // For Resume/Portfolio (centered), you could do:
+        if (tabId === 'resume' || tabId === 'portfolio') {
+          activeSection.style.display = 'block';
         }
+      }
     }
-</script>
+  </script>
 
 </body>
 </html>
