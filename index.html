@@ -36,6 +36,12 @@
       font-weight: bold;
     }
 
+    header .header-title a {
+      color: #fff;
+      text-decoration: none !important;
+      cursor: pointer;
+      display: inline-block;
+    }
     /* ----- Navigation Links ----- */
     nav a {
       text-decoration: none;
@@ -94,6 +100,15 @@
     #resume, #projects {
       text-align: center;
     }
+    
+    #resume h2 {
+      margin-bottom: 1.5rem; /* Adds more space below the Projects title */
+    }
+
+    #projects h2 {
+      margin-bottom: 1.5rem; /* Adds more space below the Projects title */
+    }
+
     #projects p {
       line-height: 1.3; /* Adjusts spacing between lines in project descriptions */
     }
@@ -139,7 +154,9 @@
 <body>
 
   <header>
-    <div class="header-title">Jared R. Lieberman</div>
+    <div class="header-title">
+      <a href="#" onclick="showTab('home')">Jared R. Lieberman</a>
+    </div>
     <nav>
       <a href="#" onclick="showTab('home')">Bio</a>
       <a href="#" onclick="showTab('resume')">Resume</a>
