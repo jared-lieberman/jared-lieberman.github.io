@@ -75,22 +75,32 @@
     }
 
     .home-image-container {
-      max-width: 200px;
-      max-height: 200px;
+      max-width: 250px;
+      max-height: 250px;
       border-radius: 50%;
       overflow: hidden;
-      margin-left: 2rem;
+      position: relative;
+      left: -100px;
     }
 
     .home-image-container img {
       width: 100%;
-      height: auto;
-      display: block;
+      height: 100%;
+      object-fit: cover;         
+      object-position: 50% 10%;
     }
 
     /* Resume & Portfolio sections */
-    #resume, #portfolio {
+    #resume, #projects {
       text-align: center;
+    }
+    #projects p {
+      line-height: 1.3; /* Adjusts spacing between lines in project descriptions */
+    }
+    #projects div {
+      margin-bottom: 2rem; /* Adds spacing between project descriptions */
+      padding-bottom: 1rem; /* Optional: adds padding for separation */
+      border-bottom: 1px solid #ddd; /* Optional: adds a subtle divider */
     }
 
     /* ----- Footer ----- */
@@ -111,31 +121,67 @@
     footer a:hover {
       color: #ccc;
     }
+
+    p + p {
+      margin-top: 1rem;
+    }
+
+    p + h3 {
+      margin-top: 2rem;
+    }
+
+    h3 + p {
+      margin-top: 1rem;
+    }
   </style>
+  <link rel="icon" type="image/png" sizes="32x32" href="columbia.jpg">
 </head>
 <body>
 
   <header>
     <div class="header-title">Jared R. Lieberman</div>
     <nav>
-      <a href="#" onclick="showTab('home')">Home/Bio</a>
+      <a href="#" onclick="showTab('home')">Bio</a>
       <a href="#" onclick="showTab('resume')">Resume</a>
-      <a href="#" onclick="showTab('portfolio')">Portfolio</a>
+      <a href="#" onclick="showTab('projects')">Projects</a>
     </nav>
   </header>
 
   <!-- Home/Bio Section -->
   <section id="home">
     <div class="home-text">
-      <h2>Welcome!</h2>
+      <h2>About Me</h2>
       <p>
-        I am a data scientist and interdisciplinary quantitative researcher. 
-        I am a graduate student in the Statistics MA program at Columbia University. 
+        I am a data scientist and interdisciplinary quantitative researcher,
+        currently studying in the Statistics MA program at Columbia University. 
+        My interests are in causal inference, experimentation, and machine learning.
         I also work in quantitative research at 
-        <a href="https://www.eurasiagroup.net/" target="_blank" style="color: #333; text-decoration: underline;">Eurasia Group</a>,
+        <a href="https://www.eurasiagroup.net/" target="_blank" style="color: #3672c2; text-decoration: underline;">Eurasia Group</a>,
         a political risk consulting firm, where I contribute methodological expertise 
-        and support data science efforts. Prior to graduate school, I was a Fulbright-Nehru 
-        Research Fellow in India.
+        and support data science efforts. 
+      </p>
+      <p>
+        Prior to graduate school, I was a Fulbright-Nehru Research Fellow in India, 
+        where I studied state-level elections and voter behavior. I was affiliated with the 
+        Trivedi Centre for Political Data at Ashoka University, and spent time at the Centre for Policy Research.
+        I performed quantitative analysis, built a dataset from archival work, 
+        and conducted interviews of Members of Parliament and Legislative Assemblies in Gujarat.
+      </p>
+      <p>
+        I have also worked as a data scientist on a research and development team within the 
+        Department of Revenue at the Commonwealth of Massachusetts, a software developer at 
+        <a href="https://polisci.mit.edu/" target="_blank" style="color: #3672c2; text-decoration: underline;">MIT</a>,
+        and as a technical intern at Evidence for Policy Design, housed within the 
+        <a href="https://www.hks.harvard.edu/centers/cid" target="_blank" style="color: #3672c2; text-decoration: underline;">Harvard Center for International Development</a>.
+      </p>
+      <h3>Awards and Fellowships</h3>
+      <p>
+        My work at the Massachusetts state government was recognized with the Commonwealth Citation for Outstanding Performance Award. 
+        I was also granted the Critical Language Enhancement Award by The Fulbright Program to fund my Hindi-language education.
+      </p>
+      <p>
+        In the summer of 2020, I was selected as part of the inaugural cohort of the <a href="https://a860-gpp.nyc.gov/downloads/9g54xk50q?locale=en" target="_blank" style="color: #3672c2; text-decoration: underline;">NYC[x] Innovation Fellowship</a>. 
+        While at Columbia, I conducted <a href="https://centerforspatialresearch.github.io/methods-tools-in-spatial-research/tutorials/MappingAfroBrazilianReligiousHistoriesAnAIAssistedTutorial.html" target="_blank" style="color: #3672c2; text-decoration: underline;">geospatial research</a> using NLP as a Data Science Institute Scholar with the Center for Spatial Research.
       </p>
     </div>
     <div class="home-image-container">
@@ -147,37 +193,76 @@
   <!-- Resume Section -->
   <section id="resume">
     <h2>Resume</h2>
-    <p>Details about Jared's work experience and education.</p>
+    <!-- Embedded PDF view -->
+    <iframe src="Jared_Lieberman_resume.pdf" width="100%" height="600px" style="border: none;"></iframe>
+    <!-- Download link -->
+    <p>
+      <a href="Jared_Lieberman_resume.pdf" download style="color: #00adb5; text-decoration: underline;">
+        Download Resume
+      </a>
+    </p>
   </section>
 
   <!-- Portfolio Section -->
-  <section id="portfolio">
-    <h2>Portfolio</h2>
+  <section id="projects">
+    <h2>Projects</h2>
     <div>
       <h3>NYC[x] Innovation Fellowship</h3>
-      <p>Details about the NYC[x] Innovation Fellowship project.</p>
+      In collaboration with the New York City Mayor’s Office of the CTO (MOCTO) and the Mayor’s Office for the Prevention of Hate Crimes (OPHC), my team 
+      developed the <a href="https://medium.com/nyc-mayors-office-of-the-cto/preventing-hate-dashboard-43883b24924f" target="_blank" style="color: #3672c2; text-decoration: underline;">Preventing Hate Dashboard</a>, a tool to better understand the landscape of hate crimes in New York City and 
+      their community impact, explore potential underreporting, and identify gaps using publicly available data on hate crimes and demographics.
+      
     </div>
     <div>
       <h3>NYC Taxi Random Forest Classifier</h3>
-      <p>Details about the NYC Taxi Random Forest Classifier project.</p>
+      <p>
+        Using the NYC public taxi data, the <a href="https://github.com/jared-lieberman/NYC_Taxi_Borough_Prediction/tree/master/nyc_taxi_random_forest" target="_blank" style="color: #3672c2; text-decoration: underline;">project</a> analyzes data from the three different types of rides (yellow taxis, green taxis, and for-hire rides)
+         and uses a randome forest classifiers to predict which borough a ride will end in. I used data from January 2018 for each ride type. 
+         The yellow taxi model performs at about 85% accuracy, the green taxi model performs at about 80% accuracy, and the for-hire rides 
+         perform at about 65-70% accuracy.         
+      </p>
     </div>
     <div>
-      <h3>Inferential Analysis for Citi Bike Ride Patterns</h3>
-      <p>Details about the Inferential Analysis for Citi Bike Ride Patterns project.</p>
+      <h3>Inferential Analysis of Citi Bike Ride Patterns</h3>            
+      <p>
+        The primary goal of the <a href="Citi Bike Ride Patterns.pdf" target="_blank" style="color: #3672c2; text-decoration: underline;">project</a> is to explore relationships between building energy
+        efficiency and sustainable transportation. At a high level I was interested in whether certain
+        types of people take or have the option to choose sustainable transportation, and generally in
+        what contexts they do so. The case study is New York City, and I utilized inferential
+        procedures, relying on linear regression models, to study more specifically relationships
+        between building energy usage, Citi Bike ride patterns, and neighborhood socioeconomic and
+        housing data. These data not only provide fertile ground for applying statistical techniques from
+        the course, but also lay the groundwork for further research with important policy implications.
+        The <a href="https://github.com/nysugfx/lr_final_project" target="_blank" style="color: #3672c2; text-decoration: underline;">GitHub Repo</a> is linked.</p>
     </div>
     <div>
-      <h3>Data Science Institute Scholar</h3>
-      <p>Details about the Data Science Institute Scholar project.</p>
+      <h3>Columbia Data Science Institute Scholar</h3>
+      <p>
+        This project, <a href="https://centerforspatialresearch.github.io/methods-tools-in-spatial-research/tutorials/MappingAfroBrazilianReligiousHistoriesAnAIAssistedTutorial.html" target="_blank" style="color: #3672c2; text-decoration: underline;">Mapping Afro-Brazilian Religious Histories: An AI-Assisted Tutorial</a>,
+         examines the historical and spatial dimensions of witchcraft accusations in Rio de Janeiro during the 
+        late 19th and early 20th centuries. By combining archival research with data science techniques, such as web scraping, 
+        natural language processing (NLP), and geospatial mapping, the project helps to explore how accusations of witchcraft 
+        were used to reinforce racial and class divides. Using the addresses of accused witches, the project aims to visualize 
+        how these trials mapped onto the city, reinforcing social and spatial segregation. We started the process with a glossary 
+        of about 60 relevant terms and performed searches across newspapers including Jornal do Brasil, Gazeta de Notícias, 
+        Diário de Pernambuco, and Diário da Noite.        
+      </p>      
     </div>
     <div>
-      <h3>Multilevel Modeling Investigating Voter Turnout in Indian Elections</h3>
-      <p>Details about the Multilevel Modeling Investigating Voter Turnout in Indian Elections project.</p>
+      <h3>Investigating Voter Turnout in Indian Elections</h3>
+      <p>The purpose of this <a href="Investigating Voter Turnout in Indian Elections.pdf" target="_blank" style="color: #3672c2; text-decoration: underline;">analysis</a> is to use Bayesian multilevel models to explore potential factors of why voter turnout tends to be higher in local 
+        and state-level elections vs. national elections. India generally has a comparatively higher turnout rate, and is unique in that 
+        voter turnout increases as each level of election decreases. The United States and Europe, where most of the turnout research 
+        has been conducted, face the opposite effects. I used election data from 1967-2021, and explored some potential explanations like 
+        which type of parties win at what rates of turnout, if there is an effect in the timing of state and national elections, 
+        and what regional differences exist.
+      </p>    
     </div>
   </section>
 
   <footer>
     <p>
-      &copy; 2024 Jared | 
+      &copy; 2025 Jared | 
       <a href="https://www.linkedin.com/in/jared-lieberman" target="_blank">LinkedIn</a> | 
       <a href="mailto:jrl2162@columbia.edu">Email</a>
     </p>
@@ -201,7 +286,7 @@
       if (activeSection) {
         activeSection.style.display = 'flex'; 
         // For Resume/Portfolio (centered), you could do:
-        if (tabId === 'resume' || tabId === 'portfolio') {
+        if (tabId === 'resume' || tabId === 'projects') {
           activeSection.style.display = 'block';
         }
       }
