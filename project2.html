@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project 2 - Jared R. Lieberman</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="columbia.jpg">
+  <style>
+    .project-detail {
+      display: flex;
+      align-items: flex-start;
+      padding: 7rem;
+      gap: 2rem; /* adds space between columns instead of justify-content */
+    }
+  
+    .project-content {
+      flex: 1;
+      margin-right: 10rem;
+    }
+  
+    .project-info {
+      width: 200px;
+      text-align: left;
+    }
+  
+    .project-navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 2rem 7rem 0 7rem;
+    }
+  
+    .project-content h2 {
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-title">
+      <a href="index.html">Jared R. Lieberman</a>
+    </div>
+    <nav>
+      <a href="index.html">BIO</a>
+      <a href="resume.html">RESUME</a>
+      <a href="projects.html">PROJECTS</a>
+    </nav>
+  </header>
+  <section class="project-detail">
+    <div class="project-content">
+      <h2 class="project-title">NYC Taxi Random Forest Classifier</h2>
+      <p class="project-description">
+        Using the NYC public taxi data, the project analyzes data from the three different types of rides (yellow taxis, green taxis, and for-hire rides)
+         and uses a random forest classifiers to predict which borough a ride will end in. I used data from January 2018 for each ride type. 
+         The yellow taxi model performs at about 85% accuracy, the green taxi model performs at about 80% accuracy, and the for-hire rides 
+         perform at about 65-70% accuracy.       
+    </div>
+    <div class="project-info">
+        <h3>INFO</h3>
+        <a href="https://github.com/jared-lieberman/NYC_Taxi_Borough_Prediction/tree/master/nyc_taxi_random_forest" target="_blank" style="color: #3672c2; text-decoration: underline;">GitHub</a>
+    </div>
+  </section>
+  <div class="project-navigation">
+    <span class="year">2019</span>
+    </div>
+  <footer>
+    <p>
+      &copy; 2025 Jared |
+      <a href="https://www.linkedin.com/in/jared-lieberman" target="_blank">LinkedIn</a> |
+      <a href="mailto:jrl2162@columbia.edu">Email</a>
+    </p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,191 @@
+/* Reset some default browser styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  h1, h2, h3 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: -0.5px;
+  }
+  
+  /* ----- Header Bar ----- */
+  header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  
+  header .header-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  header .header-title a {
+    color: #fff;
+    text-decoration: none !important;
+    cursor: pointer;
+    display: inline-block;
+  }
+  
+  /* ----- Navigation Links ----- */
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 1.5rem;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: #ccc;
+  }
+  
+  /* ----- Section Styling ----- */
+  section {
+    padding: 2rem;
+  }
+  
+  /* Home/Bio Layout */
+  #home {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .home-text {
+    max-width: 60%;
+  }
+  
+  .home-text h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .home-text p {
+    line-height: 1.6;
+  }
+  
+  .home-image-container {
+    max-width: 325px;
+    max-height: 350px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    left: -100px;
+  }
+  
+  .home-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 10%;
+  }
+  
+  /* Resume Styling */
+  #resume {
+    text-align: center;
+  }
+  
+  #resume h2 {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Portfolio Grid */
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+  
+  .project {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+    cursor: pointer;
+  }
+  
+  .project:hover {
+    opacity: 0.7;
+  }
+  
+  .project h3 {
+    color: #008080;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    min-height: 3em; /* forces consistent height */
+    display: flex;
+    align-items: center;
+  }
+  
+  .project p {
+    color: #555;
+    font-size: 1rem;
+    margin-top: 0.3rem;
+  }
+  
+  .project small {
+    color: #777;
+    font-size: 0.9rem;
+  }
+  
+  .project img {
+    max-width: 80%;
+    height: auto;
+    max-height: 120px;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+  }
+  
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+  }
+  
+  footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 0.5rem;
+  }
+  
+  footer a:hover {
+    color: #ccc;
+  }
+
+  p + p {
+    margin-top: 1rem;
+  }
+
+  p + h3 {
+    margin-top: 2rem;
+  }
+
+  h3 + p {
+    margin-top: 1rem;
+  }

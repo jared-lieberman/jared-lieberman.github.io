@@ -3,168 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jared R. Lieberman</title>
-  <style>
-    /* Reset some default browser styling */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0; /* Light gray background */
-      color: #333; /* Dark text color */
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* ----- Header Bar ----- */
-    header {
-      background-color: #333; /* Dark gray top bar */
-      color: #fff;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-    }
-
-    header .header-title {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    header .header-title a {
-      color: #fff;
-      text-decoration: none !important;
-      cursor: pointer;
-      display: inline-block;
-    }
-    /* ----- Navigation Links ----- */
-    nav a {
-      text-decoration: none;
-      color: #fff;
-      margin-left: 1.5rem;
-      font-size: 1rem;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #ccc; /* Lighter gray on hover */
-    }
-
-    /* ----- Section Styling ----- */
-    section {
-      padding: 2rem;
-      display: none; /* Hidden by default; shown via JS */
-    }
-
-    /* Home/Bio Layout */
-    #home {
-      display: flex;             /* Put text on the left, image on the right */
-      justify-content: space-between;
-      align-items: flex-start;
-    }
-
-    .home-text {
-      max-width: 60%;           /* Adjust as desired */
-    }
-
-    .home-text h2 {
-      margin-bottom: 1rem;
-    }
-
-    .home-text p {
-      line-height: 1.6;
-    }
-
-    .home-image-container {
-      max-width: 250px;
-      max-height: 250px;
-      border-radius: 50%;
-      overflow: hidden;
-      position: relative;
-      left: -100px;
-    }
-
-    .home-image-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;         
-      object-position: 50% 10%;
-    }
-
-    /* Resume & Portfolio sections */
-    #resume, #projects {
-      text-align: center;
-    }
-    
-    #resume h2 {
-      margin-bottom: 1.5rem; /* Adds more space below the Projects title */
-    }
-
-    #projects h2 {
-      margin-bottom: 1.5rem; /* Adds more space below the Projects title */
-    }
-
-    #projects p {
-      line-height: 1.3; /* Adjusts spacing between lines in project descriptions */
-    }
-    #projects div {
-      margin-bottom: 2rem; /* Adds spacing between project descriptions */
-      padding-bottom: 1rem; /* Optional: adds padding for separation */
-      border-bottom: 1px solid #ddd; /* Optional: adds a subtle divider */
-    }
-
-    /* ----- Footer ----- */
-    footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 1rem;
-      margin-top: auto; /* Push footer to the bottom */
-    }
-
-    footer a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 0.5rem;
-    }
-
-    footer a:hover {
-      color: #ccc;
-    }
-
-    p + p {
-      margin-top: 1rem;
-    }
-
-    p + h3 {
-      margin-top: 2rem;
-    }
-
-    h3 + p {
-      margin-top: 1rem;
-    }
-  </style>
+  <title>Bio - Jared R. Lieberman</title>
+  <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" sizes="32x32" href="columbia.jpg">
 </head>
 <body>
-
   <header>
     <div class="header-title">
-      <a href="#" onclick="showTab('home')">Jared R. Lieberman</a>
+      <a href="index.html">Jared R. Lieberman</a>
     </div>
     <nav>
-      <a href="#" onclick="showTab('home')">Bio</a>
-      <a href="#" onclick="showTab('resume')">Resume</a>
-      <a href="#" onclick="showTab('projects')">Projects</a>
+      <a href="index.html">BIO</a>
+      <a href="resume.html">RESUME</a>
+      <a href="projects.html">PROJECTS</a>
     </nav>
   </header>
 
-  <!-- Home/Bio Section -->
   <section id="home">
     <div class="home-text">
       <h2>About Me</h2>
@@ -207,123 +61,8 @@
     </div>
   </section>
 
-  <!-- Resume Section -->
-  <section id="resume">
-    <h2>Resume</h2>
-    <!-- Embedded PDF view -->
-    <iframe src="Jared_Lieberman_resume.pdf" width="100%" height="600px" style="border: none;"></iframe>
-    <!-- Download link -->
-    <p>
-      <a href="Jared_Lieberman_resume.pdf" download style="color: #00adb5; text-decoration: underline;">
-        Download Resume
-      </a>
-    </p>
-  </section>
-
-  <!-- Portfolio Section -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div>
-      <h3>NYC Taxi Random Forest Classifier</h3>
-      <p>
-        Using the NYC public taxi data, the <a href="https://github.com/jared-lieberman/NYC_Taxi_Borough_Prediction/tree/master/nyc_taxi_random_forest" target="_blank" style="color: #3672c2; text-decoration: underline;">project</a> analyzes data from the three different types of rides (yellow taxis, green taxis, and for-hire rides)
-         and uses a randome forest classifiers to predict which borough a ride will end in. I used data from January 2018 for each ride type. 
-         The yellow taxi model performs at about 85% accuracy, the green taxi model performs at about 80% accuracy, and the for-hire rides 
-         perform at about 65-70% accuracy.         
-      </p>
-    </div>
-    <div>
-      <h3>Transportability and External Validity in Evaluating Women’s Political Reservation Effects in India</h3>
-      <p>
-        <i>Ongoing:</i> This project aims to examine the generalizability of causal effects obtained from a randomized controlled trial (RCT), 
-        specifically, the “Women as Policy Makers” (Duflo et. al.) study in India, to a new target population. Using the structural 
-        causal model (SCM) framework, the project will build a formal SCM for the RCT data. Next, methods from 
-        transportability and external validity, for example selection diagrams, will determine whether the 
-        estimated effect (e.g., the impact of reserved political positions on local public good investments) can be identified 
-        in a new population that differs in key covariates (such as socio-economic characteristics or cultural factors). The 
-        project focuses on generalizability, robustness, and adaptation. Using 
-        data from the RCT as well as additional relevant data from external sources, the project aims to bridge the gap between 
-        rigorous experimental findings and policy decisions in varied real-world environments.        
-      </p>
-    </div>
-    <div>
-      <h3>NYC[x] Innovation Fellowship</h3>
-      <p>
-      In collaboration with the New York City Mayor’s Office of the CTO (MOCTO) and the Mayor’s Office for the Prevention of Hate Crimes (OPHC), my team 
-      developed the <a href="https://medium.com/nyc-mayors-office-of-the-cto/preventing-hate-dashboard-43883b24924f" target="_blank" style="color: #3672c2; text-decoration: underline;">Preventing Hate Dashboard</a>, a tool to better understand the landscape of hate crimes in New York City and 
-      their community impact, explore potential underreporting, and identify gaps using publicly available data on hate crimes and demographics.
-    </p>
-    </div>        
-    <div>
-      <h3>Inferential Analysis of Citi Bike Ride Patterns</h3>            
-      <p>
-        The primary goal of the <a href="Citi Bike Ride Patterns.pdf" target="_blank" style="color: #3672c2; text-decoration: underline;">project</a> is to explore relationships between building energy
-        efficiency and sustainable transportation. At a high level I was interested in whether certain
-        types of people take or have the option to choose sustainable transportation, and generally in
-        what contexts they do so. The case study is New York City, and I utilized inferential
-        procedures, relying on linear regression models, to study more specifically relationships
-        between building energy usage, Citi Bike ride patterns, and neighborhood socioeconomic and
-        housing data. These data not only provide fertile ground for applying statistical techniques from
-        the course, but also lay the groundwork for further research with important policy implications.
-        The <a href="https://github.com/nysugfx/lr_final_project" target="_blank" style="color: #3672c2; text-decoration: underline;">GitHub Repo</a> is linked.</p>
-    </div>
-    <div>
-      <h3>Columbia Data Science Institute Scholar</h3>
-      <p>
-        This project, <a href="https://centerforspatialresearch.github.io/methods-tools-in-spatial-research/tutorials/MappingAfroBrazilianReligiousHistoriesAnAIAssistedTutorial.html" target="_blank" style="color: #3672c2; text-decoration: underline;">Mapping Afro-Brazilian Religious Histories: An AI-Assisted Tutorial</a>,
-         examines the historical and spatial dimensions of witchcraft accusations in Rio de Janeiro during the 
-        late 19th and early 20th centuries. By combining archival research with data science techniques, such as web scraping, 
-        natural language processing (NLP), and geospatial mapping, the project helps to explore how accusations of witchcraft 
-        were used to reinforce racial and class divides. Using the addresses of accused witches, the project aims to visualize 
-        how these trials mapped onto the city, reinforcing social and spatial segregation. We started the process with a glossary 
-        of about 60 relevant terms and performed searches across newspapers including Jornal do Brasil, Gazeta de Notícias, 
-        Diário de Pernambuco, and Diário da Noite.        
-      </p>      
-    </div>
-    <div>
-      <h3>Investigating Voter Turnout in Indian Elections</h3>
-      <p>The purpose of this <a href="Investigating Voter Turnout in Indian Elections.pdf" target="_blank" style="color: #3672c2; text-decoration: underline;">analysis</a> is to use Bayesian multilevel models to explore potential factors of why voter turnout tends to be higher in local 
-        and state-level elections vs. national elections. India generally has a comparatively higher turnout rate, and is unique in that 
-        voter turnout increases as each level of election decreases. The United States and Europe, where most of the turnout research 
-        has been conducted, face the opposite effects. I used election data from 1967-2021, and explored some potential explanations like 
-        which type of parties win at what rates of turnout, if there is an effect in the timing of state and national elections, 
-        and what regional differences exist.
-      </p>    
-    </div>
-  </section>
-
   <footer>
-    <p>
-      &copy; 2025 Jared | 
-      <a href="https://www.linkedin.com/in/jared-lieberman" target="_blank">LinkedIn</a> | 
-      <a href="mailto:jrl2162@columbia.edu">Email</a>
-    </p>
+    <p>&copy; 2025 Jared | <a href="https://www.linkedin.com/in/jared-lieberman">LinkedIn</a> | <a href="mailto:jrl2162@columbia.edu">Email</a></p>
   </footer>
-
-  <script>
-    // Show the Home tab by default on page load
-    document.addEventListener("DOMContentLoaded", function() {
-      showTab('home');
-    });
-
-    function showTab(tabId) {
-      // Hide all sections
-      const sections = document.querySelectorAll('section');
-      sections.forEach(section => {
-        section.style.display = 'none';
-      });
-
-      // Show the requested section
-      const activeSection = document.getElementById(tabId);
-      if (activeSection) {
-        activeSection.style.display = 'flex'; 
-        // For Resume/Portfolio (centered), you could do:
-        if (tabId === 'resume' || tabId === 'projects') {
-          activeSection.style.display = 'block';
-        }
-      }
-    }
-  </script>
-
 </body>
 </html>

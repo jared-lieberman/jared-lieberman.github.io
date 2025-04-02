@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project 3 - Jared R. Lieberman</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="columbia.jpg">
+  <style>
+    .project-detail {
+      display: flex;
+      align-items: flex-start;
+      padding: 7rem;
+      gap: 2rem; /* adds space between columns instead of justify-content */
+    }
+  
+    .project-content {
+      flex: 1;
+      margin-right: 10rem;
+    }
+  
+    .project-info {
+      width: 200px;
+      text-align: left;
+    }
+  
+    .project-navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 2rem 7rem 0 7rem;
+    }
+  
+    .project-content h2 {
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-title">
+      <a href="index.html">Jared R. Lieberman</a>
+    </div>
+    <nav>
+      <a href="index.html">BIO</a>
+      <a href="resume.html">RESUME</a>
+      <a href="projects.html">PROJECTS</a>
+    </nav>
+  </header>
+  <section class="project-detail">
+    <div class="project-content">
+      <h2 class="project-title">NYC[x] Innovation Fellowship</h2>
+      <p class="project-description">
+        In collaboration with the New York City Mayor's Office of the CTO (MOCTO) and the Mayor's Office for the Prevention of Hate Crimes (OPHC), my team 
+      developed the Preventing Hate Dashboard, a tool to better understand the landscape of hate crimes in New York City and 
+      their community impact, explore potential underreporting, and identify gaps using publicly available data on hate crimes and demographics.
+      </p>
+    </div>
+    <div class="project-info">
+      <h3>INFO</h3>
+      <a href="https://medium.com/nyc-mayors-office-of-the-cto/preventing-hate-dashboard-43883b24924f" target="_blank" style="color: #3672c2; text-decoration: underline;">Report</a>
+    </div>
+  </section>
+  <div class="project-navigation">
+    <span class="year">2020-2021</span>
+  </div>
+  <footer>
+    <p>
+      &copy; 2025 Jared |
+      <a href="https://www.linkedin.com/in/jared-lieberman" target="_blank">LinkedIn</a> |
+      <a href="mailto:jrl2162@columbia.edu">Email</a>
+    </p>
+  </footer>
+</body>
+</html>

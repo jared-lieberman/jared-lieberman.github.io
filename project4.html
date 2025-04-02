@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project 4 - Jared R. Lieberman</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="columbia.jpg">
+  <style>
+    .project-detail {
+      display: flex;
+      align-items: flex-start;
+      padding: 7rem;
+      gap: 2rem; /* adds space between columns instead of justify-content */
+    }
+  
+    .project-content {
+      flex: 1;
+      margin-right: 10rem;
+    }
+  
+    .project-info {
+      width: 200px;
+      text-align: left;
+    }
+  
+    .project-navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 2rem 7rem 0 7rem;
+    }
+  
+    .project-content h2 {
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-title">
+      <a href="index.html">Jared R. Lieberman</a>
+    </div>
+    <nav>
+      <a href="index.html">BIO</a>
+      <a href="resume.html">RESUME</a>
+      <a href="projects.html">PROJECTS</a>
+    </nav>
+  </header>
+  <section class="project-detail">
+    <div class="project-content">
+      <h2 class="project-title">Inferential Analysis of Citi Bike Ride Patterns</h2>
+      <p class="project-description">
+        The primary goal of the project is to explore relationships between building energy
+        efficiency and sustainable transportation. At a high level I was interested in whether certain
+        types of people take or have the option to choose sustainable transportation, and generally in
+        what contexts they do so. The case study is New York City, and I utilized inferential
+        procedures, relying on linear regression models, to study more specifically relationships
+        between building energy usage, Citi Bike ride patterns, and neighborhood socioeconomic and
+        housing data. These data not only provide fertile ground for applying statistical techniques from
+        the course, but also lay the groundwork for further research with important policy implications.        
+      </p>
+    </div>
+    <div class="project-info">
+      <h3>INFO</h3>
+      <a href="Citi Bike Ride Patterns.pdf" target="_blank" style="color: #3672c2; text-decoration: underline;">Report</a><br>
+      <a href="https://github.com/nysugfx/lr_final_project" target="_blank" style="color: #3672c2; text-decoration: underline;">GitHub Repo</a>
+    </div>
+  </section>
+  <div class="project-navigation">
+    <span class="year">2023</span>
+  </div>
+  <footer>
+    <p>
+      &copy; 2025 Jared |
+      <a href="https://www.linkedin.com/in/jared-lieberman" target="_blank">LinkedIn</a> |
+      <a href="mailto:jrl2162@columbia.edu">Email</a>
+    </p>
+  </footer>
+</body>
+</html>
